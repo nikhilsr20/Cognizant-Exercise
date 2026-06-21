@@ -1,0 +1,66 @@
+CREATE TABLE Customers (
+    CustomerID NUMBER PRIMARY KEY,
+    Name VARCHAR2(100) NOT NULL,
+    DOB DATE NOT NULL,
+    Balance NUMBER(12, 2) DEFAULT 0 NOT NULL,
+    IsVIP CHAR(1) DEFAULT 'N' CHECK (IsVIP IN ('Y', 'N')),
+    LastModified DATE DEFAULT SYSDATE NOT NULL
+);
+
+CREATE TABLE Accounts (
+    AccountID NUMBER PRIMARY KEY,
+    CustomerID NUMBER NOT NULL,
+    AccountType VARCHAR2(20) NOT NULL,
+    Balance NUMBER(12, 2) DEFAULT 0 NOT NULL,
+    LastModified DATE DEFAULT SYSDATE NOT NULL,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+CREATE TABLE Transactions (
+    TransactionID NUMBER PRIMARY KEY,
+    AccountID NUMBER NOT NULL,
+    TransactionDate DATE DEFAULT SYSDATE NOT NULL,
+    Amount NUMBER(12, 2) NOT NULL,
+    TransactionType VARCHAR2(10) NOT NULL,
+    FOREIGN KEY (AccountID) REFERENCES Accounts(AccountID)
+);
+
+CREATE TABLE Loans (
+    LoanID NUMBER PRIMARY KEY,
+    CustomerID NUMBER NOT NULL,
+    LoanAmount NUMBER(12, 2) NOT NULL,
+    InterestRate NUMBER(5, 2) NOT NULL,
+    StartDate DATE NOT NULL,
+    EndDate DATE NOT NULL,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+CREATE TABLE Employees (
+    EmployeeID NUMBER PRIMARY KEY,
+    Name VARCHAR2(100) NOT NULL,
+    Position VARCHAR2(50) NOT NULL,
+    Salary NUMBER(12, 2) NOT NULL,
+    Department VARCHAR2(50) NOT NULL,
+    HireDate DATE NOT NULL
+);
+
+CREATE TABLE AuditLog (
+    AuditID NUMBER PRIMARY KEY,
+    TransactionID NUMBER,
+    AccountID NUMBER,
+    ActionDate DATE DEFAULT SYSDATE NOT NULL,
+    Details VARCHAR2(4000)
+);
+
+CREATE TABLE ErrorLog (
+    ErrorID NUMBER PRIMARY KEY,
+    ModuleName VARCHAR2(100) NOT NULL,
+    ErrorMessage VARCHAR2(4000) NOT NULL,
+    ErrorDate DATE DEFAULT SYSDATE NOT NULL
+);
+
+CREATE SEQUENCE TransactionSeq START WITH 100 INCREMENT BY 1;
+
+CREATE SEQUENCE AuditLogSeq START WITH 1 INCREMENT BY 1;
+
+CREATE SEQUENCE ErrorLogSeq START WITH 1 INCREMENT BY 1;
