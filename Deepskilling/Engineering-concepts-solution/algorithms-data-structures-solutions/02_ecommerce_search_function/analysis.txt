@@ -1,0 +1,13 @@
+Big O notation describes how an algorithm grows as input size increases. It helps compare algorithms independently of machine speed.
+
+Best case search happens when the desired product is found immediately. Average case search represents normal expected work. Worst case search happens when the product is last or absent.
+
+Linear search best case: O(1)
+Linear search average case: O(n)
+Linear search worst case: O(n)
+
+Binary search best case: O(1)
+Binary search average case: O(log n)
+Binary search worst case: O(log n)
+
+Binary search is better for large sorted product lists. Linear search is acceptable for small lists or unsorted data. For a real e-commerce platform, indexed search using maps, database indexes, or search engines is more suitable.

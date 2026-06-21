@@ -1,0 +1,13 @@
+Linear search checks each element one by one until the target is found or the list ends.
+
+Binary search repeatedly divides a sorted list into halves and searches only the half where the target can exist.
+
+Linear search best case: O(1)
+Linear search average case: O(n)
+Linear search worst case: O(n)
+
+Binary search best case: O(1)
+Binary search average case: O(log n)
+Binary search worst case: O(log n)
+
+Linear search works for small or unsorted book lists. Binary search is better for large lists sorted by title. Search by author may need a separate sorted structure or a map for better performance.

@@ -1,0 +1,17 @@
+Bubble Sort repeatedly compares adjacent elements and swaps them when they are in the wrong order.
+
+Insertion Sort builds a sorted section one item at a time.
+
+Quick Sort chooses a pivot, partitions the array around it, and recursively sorts both sides.
+
+Merge Sort divides the array, sorts each part, and merges the sorted parts.
+
+Bubble Sort best case: O(n)
+Bubble Sort average case: O(n^2)
+Bubble Sort worst case: O(n^2)
+
+Quick Sort best case: O(n log n)
+Quick Sort average case: O(n log n)
+Quick Sort worst case: O(n^2)
+
+Quick Sort is generally preferred because its average performance is much faster than Bubble Sort for large data. Bubble Sort is simple but inefficient for real order-management systems.

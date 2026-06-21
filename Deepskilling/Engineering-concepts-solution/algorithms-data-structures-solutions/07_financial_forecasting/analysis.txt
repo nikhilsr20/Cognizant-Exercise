@@ -1,0 +1,8 @@
+Recursion is a technique where a method solves a problem by calling itself with a smaller input until it reaches a base case.
+
+The recursive future value calculation reduces the year count by one in each call and multiplies the result by the growth factor.
+
+Recursive time complexity: O(n)
+Recursive space complexity: O(n)
+
+The recursive solution can be optimized by using an iterative loop, which keeps the time complexity O(n) but reduces space complexity to O(1). For fixed compound growth, a direct formula using power can calculate the answer in O(1).

@@ -1,0 +1,12 @@
+Data structures and algorithms are important for large inventories because they make storage, lookup, update, and deletion predictable as the number of products grows.
+
+A HashMap is suitable when products are searched by productId because it gives average constant-time access. An ArrayList is useful when ordered traversal is more important than fast lookup. A TreeMap is useful when products must remain sorted by key.
+
+Chosen data structure: HashMap<Integer, Product>
+
+Add product: O(1) average, O(n) worst case
+Update product: O(1) average, O(n) worst case
+Delete product: O(1) average, O(n) worst case
+Traverse products: O(n)
+
+Optimization can be done by using productId as a unique key, indexing frequently searched fields, keeping separate maps for different lookup requirements, and avoiding full scans for common operations.

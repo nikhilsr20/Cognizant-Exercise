@@ -1,0 +1,10 @@
+A singly linked list has nodes where each node stores data and a reference to the next node.
+
+A doubly linked list has references to both previous and next nodes, making backward traversal and deletion easier when the node reference is known.
+
+Add task at end: O(n)
+Search task: O(n)
+Traverse tasks: O(n)
+Delete task: O(n)
+
+Linked lists are useful when the number of elements changes frequently. They do not require contiguous memory and can grow dynamically. Arrays are better for fast index-based access.

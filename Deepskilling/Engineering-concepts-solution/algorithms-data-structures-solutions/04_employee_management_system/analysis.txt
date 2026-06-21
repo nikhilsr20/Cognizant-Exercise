@@ -1,0 +1,10 @@
+Arrays store elements in contiguous memory locations. This allows direct access by index and efficient traversal.
+
+Advantages of arrays include simple structure, fast index access, low overhead, and good cache performance.
+
+Add employee at end: O(1) when capacity is available
+Search employee: O(n)
+Traverse employees: O(n)
+Delete employee: O(n)
+
+Arrays have fixed size, costly insertion or deletion in the middle, and slow search when data is not indexed or sorted. Arrays are best when size is known and index-based access is frequent.
