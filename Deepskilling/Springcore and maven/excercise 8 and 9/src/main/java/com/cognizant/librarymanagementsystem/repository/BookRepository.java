@@ -6,15 +6,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * BookRepository — Spring Data JPA repository for the Book entity.
-
- * Exercise 8: JpaRepository provides CRUD out of the box.
- * All method calls here are intercepted by LoggingAspect via AOP.
- */
+// Exercise 9 – Spring Data JPA Repository
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {
-
 
     List<Book> findByAuthor(String author);
 

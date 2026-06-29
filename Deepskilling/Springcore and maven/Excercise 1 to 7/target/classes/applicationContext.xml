@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
@@ -11,49 +12,25 @@
            http://www.springframework.org/schema/aop
                http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <!-- ==============================================================
-         Exercise 6: Enable Component Scanning for the base package.
-         Spring will auto-detect @Service, @Repository, @Component, @Aspect.
-         This picks up: BookService, BookRepository, LoggingAspect
-         ============================================================== -->
+    <!-- Exercise 6 -->
+    <context:component-scan base-package="com.cognizant.librarymanagementsystem"/>
 
-    <context:component-scan base-package="com.rishbootdev.librarymanagementsystem"/>
-
-    <!-- ==============================================================
-         Exercise 3 & 6: Enable AspectJ Auto-Proxy support.
-         Required for @Aspect-annotated classes (LoggingAspect) to work.
-         ============================================================== -->
+    <!-- Exercise 3 -->
     <aop:aspectj-autoproxy/>
 
-    <!-- ==============================================================
-         Exercise 1 & 5: Explicit XML Bean Definitions
-         These XML-defined beans demonstrate manual IoC configuration.
-         (The component-scan beans above are the annotation-based ones.)
-         ============================================================== -->
+    <!-- Exercise 1 & 5 -->
+    <bean id="bookRepository"
+          class="com.cognizant.librarymanagementsystem.repository.BookRepository"/>
 
-    <!-- BookRepository bean (XML-defined, for Ex 1, 2, 5, 7) -->
-
-    <bean id="bookRepository" class="com.cognizant.librarymanagementsystem.repository.BookRepository"/>
-
-    <!-- ==============================================================
-         Exercise 2 & 5: BookService with SETTER INJECTION
-         The <property> tag calls setBookRepository(bookRepository).
-         ============================================================== -->
+    <!-- Exercise 2 & 5 -->
     <bean id="bookServiceSetter"
           class="com.cognizant.librarymanagementsystem.service.BookService">
-        <!-- Setter injection: Spring calls setBookRepository() -->
         <property name="bookRepository" ref="bookRepository"/>
     </bean>
 
-    <!-- ==============================================================
-         Exercise 7: BookService with CONSTRUCTOR INJECTION
-         The <constructor-arg> tag calls BookService(BookRepository).
-         ============================================================== -->
+    <!-- Exercise 7 -->
     <bean id="bookServiceConstructor"
           class="com.cognizant.librarymanagementsystem.service.BookService">
-
-        <!-- Constructor injection: Spring calls BookService(BookRepository) -->
-
         <constructor-arg ref="bookRepository"/>
     </bean>
 

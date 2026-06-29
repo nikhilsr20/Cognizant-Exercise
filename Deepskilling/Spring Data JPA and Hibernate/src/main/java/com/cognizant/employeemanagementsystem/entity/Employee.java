@@ -14,6 +14,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 
+// Exercise 11 – Employee Entity
 @Data
 @Entity
 @DynamicInsert
@@ -22,8 +23,14 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Table(name = "employees")
 @NamedQueries({
-        @NamedQuery(name = "Employee.findPermanentEmployees", query = "SELECT e FROM Employee e WHERE e.permanent = true"),
-        @NamedQuery(name = "Employee.findBySalaryGreaterThanNamed", query = "SELECT e FROM Employee e WHERE e.salary > :salary")
+        @NamedQuery(
+                name = "Employee.findPermanentEmployees",
+                query = "SELECT e FROM Employee e WHERE e.permanent = true"
+        ),
+        @NamedQuery(
+                name = "Employee.findBySalaryGreaterThanNamed",
+                query = "SELECT e FROM Employee e WHERE e.salary > :salary"
+        )
 })
 @EntityListeners(AuditingEntityListener.class)
 public class Employee {
