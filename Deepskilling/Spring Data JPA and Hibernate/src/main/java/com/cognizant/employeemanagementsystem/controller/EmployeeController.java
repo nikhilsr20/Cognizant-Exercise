@@ -22,6 +22,8 @@ public class EmployeeController {
 
     private final EmployeeService employeeService;
 
+
+
     @PostMapping
     public Employee create(@RequestBody EmployeeRequest request) {
         log.info("POST /api/employees");
@@ -39,7 +41,11 @@ public class EmployeeController {
                                   @RequestParam(defaultValue = "10") int size,
                                   @RequestParam(defaultValue = "id") String sortBy,
                                   @RequestParam(defaultValue = "asc") String direction) {
-        Sort sort = direction.equalsIgnoreCase("desc") ? Sort.by(sortBy).descending() : Sort.by(sortBy).ascending();
+
+        Sort sort = direction.equalsIgnoreCase("desc")
+                ? Sort.by(sortBy).descending()
+                : Sort.by(sortBy).ascending();
+
         log.info("GET /api/employees");
         return employeeService.findAll(PageRequest.of(page, size, sort));
     }
@@ -87,7 +93,8 @@ public class EmployeeController {
     }
 
     @PutMapping("/{id}")
-    public Employee update(@PathVariable Long id, @RequestBody EmployeeRequest request) {
+    public Employee update(@PathVariable Long id,
+                           @RequestBody EmployeeRequest request) {
         log.info("PUT /api/employees/{}", id);
         return employeeService.update(id, request);
     }

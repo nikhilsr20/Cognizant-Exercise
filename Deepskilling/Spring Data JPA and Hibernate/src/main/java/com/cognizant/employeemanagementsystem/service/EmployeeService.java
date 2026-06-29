@@ -1,7 +1,7 @@
 package com.cognizant.employeemanagementsystem.service;
 
-import com.rishbootdev.employeemanagementsystem.dto.EmployeeRequest;
-import com.rishbootdev.employeemanagementsystem.dto.EmployeeSummary;
+import com.cognizant.employeemanagementsystem.dto.EmployeeRequest;
+import com.cognizant.employeemanagementsystem.dto.EmployeeSummary;
 import com.cognizant.employeemanagementsystem.entity.Department;
 import com.cognizant.employeemanagementsystem.entity.Employee;
 import com.cognizant.employeemanagementsystem.projection.EmployeeView;

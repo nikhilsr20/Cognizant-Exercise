@@ -14,7 +14,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 
-// Exercise 11 – Employee Entity
+
 @Data
 @Entity
 @DynamicInsert

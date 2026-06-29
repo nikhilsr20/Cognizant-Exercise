@@ -15,7 +15,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 import java.util.List;
 
-// Exercise 11 – Employee Management System
+
 @Slf4j
 @EnableJpaAuditing(auditorAwareRef = "auditorProvider")
 @SpringBootApplication

@@ -24,6 +24,8 @@ import java.util.List;
 @EntityListeners(AuditingEntityListener.class)
 public class Department {
 
+    // Exercise 11 – Department Entity
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

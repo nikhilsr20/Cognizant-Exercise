@@ -16,6 +16,8 @@ public class DepartmentController {
 
     private final DepartmentService departmentService;
 
+  
+
     @PostMapping
     public Department create(@RequestBody Department department) {
         log.info("POST /api/departments");
@@ -41,7 +43,8 @@ public class DepartmentController {
     }
 
     @PutMapping("/{id}")
-    public Department update(@PathVariable Long id, @RequestBody Department department) {
+    public Department update(@PathVariable Long id,
+                             @RequestBody Department department) {
         log.info("PUT /api/departments/{}", id);
         return departmentService.update(id, department);
     }

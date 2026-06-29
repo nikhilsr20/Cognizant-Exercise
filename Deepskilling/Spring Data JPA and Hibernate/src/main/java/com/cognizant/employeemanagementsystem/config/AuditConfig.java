@@ -9,6 +9,7 @@ import java.util.Optional;
 @Configuration
 public class AuditConfig {
 
+
     @Bean
     public AuditorAware<String> auditorProvider() {
         return () -> Optional.of("system-user");

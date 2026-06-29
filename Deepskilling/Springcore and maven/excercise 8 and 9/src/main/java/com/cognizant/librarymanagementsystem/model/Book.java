@@ -2,13 +2,7 @@ package com.cognizant.librarymanagementsystem.model;
 
 import jakarta.persistence.*;
 
-/**
- * Book — JPA Entity mapped to the BOOK table in H2.
-
- * Exercise 8: This is the domain entity that the REST controller
- * exposes, and whose service/repository methods are intercepted by
- * the LoggingAspect for AOP demonstration.
- */
+// Exercise 9 – JPA Entity
 @Entity
 @Table(name = "book")
 public class Book {
@@ -26,32 +20,53 @@ public class Book {
     @Column
     private String isbn;
 
-
-    // Constructors
-
-    public Book() {}
-
-    public Book(String title, String author, String isbn) {
-        this.title  = title;
-        this.author = author;
-        this.isbn   = isbn;
+    public Book() {
     }
 
+    public Book(String title, String author, String isbn) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+    }
 
-    public Long getId()              { return id; }
-    public void setId(Long id)       { this.id = id; }
+    public Long getId() {
+        return id;
+    }
 
-    public String getTitle()           { return title; }
-    public void setTitle(String title) { this.title = title; }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    public String getAuthor()             { return author; }
-    public void setAuthor(String author)  { this.author = author; }
+    public String getTitle() {
+        return title;
+    }
 
-    public String getIsbn()            { return isbn; }
-    public void setIsbn(String isbn)   { this.isbn = isbn; }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
 
     @Override
     public String toString() {
-        return "Book{id=" + id + ", title='" + title + "', author='" + author + "', isbn='" + isbn + "'}";
+        return "Book{id=" + id +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", isbn='" + isbn + '\'' +
+                '}';
     }
 }

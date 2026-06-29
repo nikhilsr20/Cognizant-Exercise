@@ -11,12 +11,14 @@ import javax.sql.DataSource;
 @Configuration
 public class DataSourceConfig {
 
+
     @Bean
     @Primary
     @ConfigurationProperties("spring.datasource")
     public DataSource primaryDataSource() {
         return new HikariDataSource();
     }
+
 
     @Bean
     @ConfigurationProperties("app.secondary.datasource")
