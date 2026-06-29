@@ -1,6 +1,6 @@
 package com.cognizant.employeemanagementsystem.repository;
 
-import com.rishbootdev.employeemanagementsystem.dto.EmployeeSummary;
+import com.cognizant.employeemanagementsystem.dto.EmployeeSummary;
 import com.cognizant.employeemanagementsystem.entity.Employee;
 import com.cognizant.employeemanagementsystem.projection.EmployeeView;
 import org.springframework.data.domain.Page;
