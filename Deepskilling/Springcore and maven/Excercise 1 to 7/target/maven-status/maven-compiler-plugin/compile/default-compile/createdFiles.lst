@@ -1,0 +1,5 @@
+com/cognizant/librarymanagementsystem/model/Book.class
+com/cognizant/librarymanagementsystem/aspect/LoggingAspect.class
+com/cognizant/librarymanagementsystem/repository/BookRepository.class
+com/cognizant/librarymanagementsystem/service/BookService.class
+com/cognizant/librarymanagementsystem/LibraryManagementApplication.class
