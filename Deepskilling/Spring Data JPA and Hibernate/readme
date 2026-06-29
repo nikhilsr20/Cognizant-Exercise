@@ -1,0 +1,8 @@
+# Week 2: Core Spring & Data Persistence
+
+This folder contains my solutions for the Cognizant Digital Nurture (Java FSE) Week 2 assignments.
+
+## Topics Covered:
+* Spring Core & Maven (Dependency Injection, IOC Container, and project lifecycle management)
+* Spring Data JPA with Spring Boot
+* Hibernate (ORM frameworks, entity mappings, and relationships)
