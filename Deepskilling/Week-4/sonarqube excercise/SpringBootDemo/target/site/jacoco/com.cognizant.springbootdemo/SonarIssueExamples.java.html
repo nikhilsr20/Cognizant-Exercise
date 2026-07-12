@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SonarIssueExamples.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">SpringBootDemo</a> &gt; <a href="index.source.html" class="el_package">com.cognizant.springbootdemo</a> &gt; <span class="el_source">SonarIssueExamples.java</span></div><h1>SonarIssueExamples.java</h1><pre class="source lang-java linenums">package com.cognizant.springbootdemo;
+
+import java.security.SecureRandom;
+
+public class SonarIssueExamples {
+
+    private static final int MIN_REFERENCE_NUMBER = 100000;
+    private static final int REFERENCE_NUMBER_RANGE = 900000;
+
+    private final String buyerName;
+    private final SecureRandom secureRandom;
+
+    public SonarIssueExamples() {
+<span class="fc" id="L14">        this(&quot;Rishabh Dubey&quot;, new SecureRandom());</span>
+<span class="fc" id="L15">    }</span>
+
+<span class="fc" id="L17">    SonarIssueExamples(String buyerName, SecureRandom secureRandom) {</span>
+<span class="fc" id="L18">        this.buyerName = buyerName;</span>
+<span class="fc" id="L19">        this.secureRandom = secureRandom;</span>
+<span class="fc" id="L20">    }</span>
+
+    public String createPurchaseReference() {
+<span class="fc" id="L23">        int referenceNumber = MIN_REFERENCE_NUMBER + secureRandom.nextInt(REFERENCE_NUMBER_RANGE);</span>
+<span class="fc" id="L24">        return &quot;CAR-&quot; + referenceNumber;</span>
+    }
+
+    public String formatCarModel(String carModel) {
+<span class="fc bfc" id="L28" title="All 4 branches covered.">        String selectedCarModel = carModel == null || carModel.isBlank() ? &quot;a new car&quot; : carModel.strip();</span>
+<span class="fc" id="L29">        return buyerName + &quot; wants to purchase &quot; + selectedCarModel;</span>
+    }
+
+    public boolean isPremiumCar(String carModel) {
+<span class="fc" id="L33">        return &quot;Honda City ZX&quot;.equals(carModel);</span>
+    }
+
+    public String createBudgetMessage(int budget) {
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        if (budget &lt;= 0) {</span>
+<span class="fc" id="L38">            return buyerName + &quot; has not set a car budget&quot;;</span>
+        }
+<span class="fc" id="L40">        return buyerName + &quot; has a car budget of &quot; + budget;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

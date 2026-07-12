@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.cognizant.springbootdemo.CarPurchaseServiceTest
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.669 s -- in com.cognizant.springbootdemo.CarPurchaseServiceTest

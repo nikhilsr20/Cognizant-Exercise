@@ -1,0 +1,6 @@
+com\cognizant\springbootdemo\SpringBootDemoApplicationTests.class
+com\cognizant\springbootdemo\CarPurchaseServiceTest$PaymentCalculations.class
+com\cognizant\springbootdemo\CarPurchaseServiceTest$PurchaseDecisions.class
+com\cognizant\springbootdemo\CarPurchaseServiceTest$Validation.class
+com\cognizant\springbootdemo\CarPurchaseServiceTest.class
+com\cognizant\springbootdemo\SonarIssueExamplesTest.class

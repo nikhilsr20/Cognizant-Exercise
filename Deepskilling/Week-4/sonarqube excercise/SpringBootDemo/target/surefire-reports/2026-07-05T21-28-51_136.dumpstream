@@ -1,0 +1,5 @@
+# Created at 2026-07-05T21:28:51.334
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Cognizant\src\Cognizant_DN\DeepSkilling\Week_4\sonarqube\SpringBootDemo\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

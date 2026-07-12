@@ -1,0 +1,38 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: centralized-auth-sso-exercises
+  security:
+    oauth2:
+      client:
+        registration:
+          my-client:
+            provider: my-provider
+            client-id: ${OAUTH2_CLIENT_ID:mock-client-id}
+            client-secret: ${OAUTH2_CLIENT_SECRET:mock-client-secret}
+            scope:
+              - openid
+              - profile
+              - email
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+        provider:
+          my-provider:
+            authorization-uri: https://accounts.google.com/o/oauth2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://openidconnect.googleapis.com/v1/userinfo
+            user-name-attribute: sub
+      resourceserver:
+        jwt:
+          issuer-uri: ${JWT_ISSUER_URI:https://issuer.example.com}
+    jwt:
+      secret: ${JWT_SECRET:mock-jwt-secret-key-for-local-development-only}
+      validity-in-ms: 3600000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

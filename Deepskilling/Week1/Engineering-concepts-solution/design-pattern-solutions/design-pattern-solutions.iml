@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/AdapterPatternExample" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/BuilderPatternExample" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CommandPatternExample" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DecoratorPatternExample" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DependencyInjectionExample" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/FactoryMethodPatternExample" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVCPatternExample" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ObserverPatternExample" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ProxyPatternExample" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SingletonPatternExample" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/StrategyPatternExample" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

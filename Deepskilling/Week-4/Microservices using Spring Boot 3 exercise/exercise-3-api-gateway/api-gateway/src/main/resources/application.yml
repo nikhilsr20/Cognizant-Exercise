@@ -1,0 +1,57 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: api-gateway
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  cloud:
+    gateway:
+      filter:
+        local-response-cache:
+          enabled: true
+          time-to-live: 30s
+          size: 50MB
+      routes:
+        - id: customer-service-route
+          uri: http://localhost:8085
+          predicates:
+            - Path=/customers/**
+          filters:
+            # Path rewriting: /customers/** -> /api/customers/**
+            - RewritePath=/customers/(?<segment>.*), /api/customers/${segment}
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 5
+                redis-rate-limiter.burstCapacity: 10
+                key-resolver: "#{@ipKeyResolver}"
+            - name: LocalResponseCache
+              args:
+                timeToLive: 30s
+                size: 50MB
+
+        - id: billing-service-route
+          uri: http://localhost:8086
+          predicates:
+            - Path=/billing/**
+          filters:
+            # Path rewriting: /billing/** -> /api/bills/**
+            - RewritePath=/billing/(?<segment>.*), /api/bills/${segment}
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 5
+                redis-rate-limiter.burstCapacity: 10
+                key-resolver: "#{@ipKeyResolver}"
+            - name: LocalResponseCache
+              args:
+                timeToLive: 30s
+                size: 50MB
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway
