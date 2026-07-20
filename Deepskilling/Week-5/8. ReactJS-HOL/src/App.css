@@ -1,0 +1,30 @@
+.people-counter {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.counter-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.counter-item button {
+  border: 1px solid #167c2b;
+  border-radius: 2px;
+  background: #8fe39e;
+  color: #102a16;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .people-counter {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

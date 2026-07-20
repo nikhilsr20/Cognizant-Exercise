@@ -1,0 +1,27 @@
+.student-details {
+  text-align: center;
+  font-size: large;
+  padding: 2rem 1rem;
+}
+
+.student-details h1 {
+  color: brown;
+  margin-top: 0;
+}
+
+.name {
+  color: blue;
+  font-weight: 300;
+}
+
+.school {
+  color: crimson;
+}
+
+.total {
+  color: darkmagenta;
+}
+
+.score {
+  color: forestgreen;
+}

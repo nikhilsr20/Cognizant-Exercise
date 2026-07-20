@@ -1,0 +1,40 @@
+.event-page {
+  padding: 1rem;
+}
+
+.event-examples {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.counter-value {
+  margin: 0 0 0.5rem;
+}
+
+.currency-converter {
+  margin-top: 2rem;
+}
+
+.currency-converter h1 {
+  color: green;
+}
+
+.currency-converter form {
+  display: grid;
+  grid-template-columns: 90px 180px;
+  gap: 0.5rem;
+  align-items: center;
+  width: fit-content;
+}
+
+.currency-converter button {
+  grid-column: 2;
+  justify-self: start;
+}
+
+.conversion-result {
+  color: green;
+  font-weight: 600;
+}

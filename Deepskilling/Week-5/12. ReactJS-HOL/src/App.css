@@ -1,0 +1,14 @@
+.app-container {
+  margin-left: 115px;
+  margin-top: 92px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+button {
+  padding: 3px 9px;
+}
