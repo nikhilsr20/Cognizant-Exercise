@@ -1,0 +1,8 @@
+.user-container {
+  width: fit-content;
+  margin: 120px auto;
+}
+
+.user-container img {
+  display: block;
+}

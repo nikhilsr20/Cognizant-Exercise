@@ -1,48 +1,68 @@
 # ReactJS Hands-on Lab 8
 
-This project implements the exercise described in `8. ReactJS-HOL.docx`.
-It demonstrates the use of the React State object through a mall entry and exit counter.
+This project is a simple **ReactJS** application developed as part of **ReactJS Hands-on Lab 8**. It demonstrates the use of **React State** by implementing a mall entry and exit counter.
 
 ## Objective
 
-Create a React application named `counterapp` with a component named `CountPeople`.
+Create a React application named **counterapp** with a class component called **CountPeople** that keeps track of:
 
-The component maintains:
+* **Entry Count** – Number of people entering the mall.
+* **Exit Count** – Number of people leaving the mall.
 
-- `entrycount` for the number of people entering the mall.
-- `exitcount` for the number of people exiting the mall.
+## Features
 
-## Browser Output
+* Built using **Create React App**
+* Uses **React Class Components**
+* Demonstrates React **State** management
+* Updates the UI dynamically when the state changes
+* Simple and interactive counter application
 
-`output/output.png`
+## How It Works
 
-![Mall People Counter Browser Output](output/output.png)
+The application maintains two state variables:
 
-## Implementation Steps
+* `entrycount` – Stores the total number of entries.
+* `exitcount` – Stores the total number of exits.
 
-### 1. Created the Counter Application
+Two buttons allow users to update the counters:
 
-A React application named `counterapp` was created with a class component named `CountPeople`.
+* **Login** – Increments the entry counter.
+* **Exit** – Increments the exit counter.
+
+Whenever a button is clicked, the corresponding state value is updated using `setState()`, and React automatically re-renders the component to display the latest count.
+
+## Getting Started
+
+Install the project dependencies:
 
 ```bash
-npx create-react-app counterapp
+npm install
 ```
 
-### 2. Implemented the State and Methods
-
-The constructor and React State object were used to store `entrycount` and `exitcount`.
-
-Two methods were implemented:
-
-- `updateEntry()` increments `entrycount` when the **Login** button is clicked.
-- `updateExit()` increments `exitcount` when the **Exit** button is clicked.
-
-### 3. Ran and Verified the Application
-
-The application was started using:
+Start the development server:
 
 ```bash
 npm start
 ```
 
-The browser displayed the Login and Exit buttons with their respective counters.
+Open your browser and visit:
+
+```text
+http://localhost:3000
+```
+
+## Build the Project
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+## Run Tests
+
+Execute the test suite:
+
+```bash
+npm test -- --watchAll=false
+

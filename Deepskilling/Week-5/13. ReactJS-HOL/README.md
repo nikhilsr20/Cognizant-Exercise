@@ -1,81 +1,84 @@
 # ReactJS Hands-on Lab 13
 
-This project implements the exercise described in `13. ReactJS-HOL.docx`.
-It demonstrates conditional rendering, rendering multiple components, list rendering, keys, extracted components, and the `map()` function.
+This project is a **ReactJS** application developed as part of **ReactJS Hands-on Lab 13**. It demonstrates **conditional rendering**, **list rendering**, the **`map()`** function, **React keys**, and component composition.
 
-## Project Creation
+## Objectives
 
-The React application was created from the command line using:
+* Render multiple React components
+* Display lists using the `map()` function
+* Assign unique keys to list items
+* Implement conditional rendering
+* Organize the application using reusable components
+
+## Features
+
+* Built using **Create React App**
+* Demonstrates list rendering with `map()`
+* Uses unique keys for efficient rendering
+* Implements multiple conditional rendering techniques
+* Modular component-based architecture
+* Displays books, blogs, and courses in separate sections
+
+## Application Overview
+
+The application consists of three main components:
+
+### Course Details
+
+Displays a list of available courses along with their respective dates.
+
+### Book Details
+
+Displays a collection of books using the `map()` function. Each book item is rendered with a unique React key.
+
+### Blog Details
+
+Displays blog information including:
+
+* Title
+* Author
+* Description
+
+The application also demonstrates different approaches to conditional rendering, including:
+
+* Logical `&&`
+* Ternary operator
+* Returning `null`
+* Helper functions
+
+## Getting Started
+
+Install the project dependencies:
 
 ```bash
-npx create-react-app bloggerapp
+npm install
 ```
 
-## Browser Output
-
-`output/output1.png`
-
-![Blogger App Browser Output](output/output.png)
-
----
-
-## Implementation Steps
-
-### 1. Created the React application
-
-A React application named `bloggerapp` was created.
-
-```bash
-npx create-react-app bloggerapp
-```
-
-### 2. Created components folder
-
-All detail components were placed inside the `src/components` folder.
-
-### 3. Created Book Details component
-
-The `BookDetails` component displays the book list using `map()`.
-
-Each book item uses a unique key.
-
-### 4. Created Blog Details component
-
-The `BlogDetails` component displays blog title, author, and description.
-
-### 5. Created Course Details component
-
-The `CourseDetails` component displays course names and dates.
-
-### 6. Implemented conditional rendering
-
-Conditional rendering was implemented using different approaches such as:
-
-- Logical `&&`
-- Ternary expression
-- Returning `null`
-- Helper function
-
-### 7. Rendered all components
-
-The application displays:
-
-- Course Details
-- Book Details
-- Blog Details
-
-The final browser output shows all three sections in columns with green vertical separators.
-
-### 8. Ran the application
-
-The application was started using:
+Start the development server:
 
 ```bash
 npm start
 ```
 
-## Available Commands
+Open your browser and visit:
 
-| Command | Purpose |
-| --- | --- |
-| `npm start` | Starts the development server |
+```text
+http://localhost:3000
+```
+
+## Build the Project
+
+Generate an optimized production build:
+
+```bash
+npm run build
+```
+
+## Run Tests
+
+Execute the test suite:
+
+```bash
+npm test -- --watchAll=false
+```
+

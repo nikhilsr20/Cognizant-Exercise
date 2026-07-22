@@ -54,6 +54,6 @@ Execute the test suite:
 npm test -- --watchAll=false
 ```
 
-## Output
+
 
 

@@ -1,64 +1,76 @@
 # ReactJS Hands-on Lab 12
 
-This project implements the exercise described in `12. ReactJS-HOL.docx`.
-It demonstrates conditional rendering in React using Login and Logout buttons.
+This project is a **ReactJS** application developed as part of **ReactJS Hands-on Lab 12**. It demonstrates **conditional rendering** by displaying different components based on the user's authentication status.
 
-## Project Creation
+## Objectives
 
-The React application was created from the command line using:
+* Implement conditional rendering in React
+* Display different UI for authenticated and guest users
+* Toggle between Login and Logout states
+* Manage component rendering based on application state
+
+## Features
+
+* Built using **Create React App**
+* Demonstrates React conditional rendering
+* Login and Logout functionality
+* Dynamic greeting messages
+* Simple authentication state management
+
+## Application Overview
+
+The application displays different content depending on whether the user is logged in.
+
+### Guest View
+
+The application displays:
+
+* **Please sign up.**
+* **Login** button
+
+### Logged-in View
+
+The application displays:
+
+* **Welcome back**
+* **Logout** button
+
+The UI updates automatically when the user logs in or logs out.
+
+## Getting Started
+
+Install the project dependencies:
 
 ```bash
-npx create-react-app ticketbookingapp
+npm install
 ```
 
-## Browser Output
-
-`output/output1.png`
-
-![Guest Page Browser Output](output/output1.png)
-
-`output/output2.png`
-
-![User Page Browser Output](output/output2.png)
-
----
-
-## Implementation Steps
-
-### 1. Created the React application
-
-A React application named `ticketbookingapp` was created.
-
-```bash
-npx create-react-app ticketbookingapp
-```
-
-### 2. Created Login and Logout buttons
-
-The Login button is displayed for the guest user.
-The Logout button is displayed for the logged-in user.
-
-### 3. Implemented Greeting component
-
-The `Greeting` component checks whether the user is logged in.
-If the user is logged in, `Welcome back` is displayed.
-If the user is not logged in, `Please sign up.` is displayed.
-
-### 4. Rendered the correct page
-
-The guest screen displays `Please sign up.` with the Login button.
-The logged-in screen displays `Welcome back` with the Logout button.
-
-### 5. Ran the application
-
-The application was started using:
+Start the development server:
 
 ```bash
 npm start
 ```
 
-## Available Commands
+Open your browser and visit:
 
-| Command | Purpose |
-| --- | --- |
-| `npm start` | Starts the development server |
+```text
+http://localhost:3000
+```
+
+## Build the Project
+
+Generate an optimized production build:
+
+```bash
+npm run build
+```
+
+## Run Tests
+
+Execute the test suite:
+
+```bash
+npm test -- --watchAll=false
+```
+
+
